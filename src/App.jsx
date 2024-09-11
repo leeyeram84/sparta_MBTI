@@ -54,6 +54,10 @@ function App() {
                             path="/result"
                             element={<TestResultPage user={user} />}
                         ></Route>
+                        <Route
+                            path="/profile"
+                            element={<Profile user={user} />}
+                        ></Route>
                     </Route>
                     <Route path="/" element={<Home />}></Route>
                 </Routes>

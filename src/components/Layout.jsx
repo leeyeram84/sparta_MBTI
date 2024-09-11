@@ -31,6 +31,9 @@ const Layout = ({ children }) => {
                             <>
                                 {nickname}님 안녕하세요!
                                 <button onClick={handleLogout}>로그아웃</button>
+                                <button onClick={() => navigate("/profile")}>
+                                    마이페이지
+                                </button>
                             </>
                         ) : (
                             <>
