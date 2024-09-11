@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../components/UserContext";
+// import useLoggedIn from "../Zustand/zustand";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -9,6 +10,9 @@ const Login = () => {
     const { setUser } = useContext(UserContext);
     const [id, setId] = useState("");
     const [password, setPassword] = useState("");
+    // const { handleUserLoggedIn, isLoggedIn } = useLoggedIn(
+    //     (state) => state.isLoggedIn
+    // );
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -24,6 +28,7 @@ const Login = () => {
 
         if (response.data.success) {
             alert("로그인 되었습니다.");
+
             navigate("/");
         } else {
             alert("아이디 또는 비밀번호, 닉네임을 확인해주세요.");

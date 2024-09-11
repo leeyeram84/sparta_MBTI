@@ -7,7 +7,7 @@ const Profile = ({ user }) => {
     const [nickname, setNickname] = useState("");
 
     const handleSubmit = async (e) => {
-        e.preventDefault;
+        e.preventDefault();
 
         try {
             const token = user.accessToken;
@@ -43,8 +43,7 @@ const Profile = ({ user }) => {
 
     return (
         <div>
-            <h1>마이페이지</h1>
-            {user.nickname}어서오고
+            <h1>{user.nickname}님의 마이페이지</h1>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"

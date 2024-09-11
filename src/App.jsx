@@ -29,9 +29,12 @@ function App() {
     };
 
     // 강제 접근 막기
+
     const PrivateRoute = () => {
+        console.log(user);
         if (!user?.success) {
             alert("로그인해주세요!!");
+
             return <Navigate to="/login" />;
         }
         return <Outlet />;
