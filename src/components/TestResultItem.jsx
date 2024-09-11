@@ -24,7 +24,9 @@ const mbtiDescriptions = {
 };
 
 const TestResultItem = ({ result, user, onUpdate, onDelete }) => {
-    const isOwner = result.userId === user.id;
+    // console.log(result.userId);
+
+    const isOwner = result.userId === user.userId;
 
     const formattedDate = new Date(result.date).toLocaleString();
 
@@ -45,7 +47,7 @@ const TestResultItem = ({ result, user, onUpdate, onDelete }) => {
     const handleDelete = async () => {
         try {
             await deleteTestResult(result.id);
-            onDelete(); // 부모 컴포넌트에서 결과 목록을 다시 불러오도록 요청
+            onDelete();
         } catch (error) {
             console.error("Delete failed:", error);
             alert("Delete failed. Please try again.");

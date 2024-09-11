@@ -1,48 +1,45 @@
 {
   "testResults": [
     {
-      "id": "bcea",
-      "nickname": "에람쓰",
-      "result": "ESTJ",
+      "id": "4c6d",
+      "userId": "killhvhl1129",
+      "nickname": "이예람",
+      "result": "ESFP",
       "answer": [
         "예",
         "예",
-        "예",
-        "예"
+        null,
+        null
       ],
-      "date": "2024-09-11T05:50:32.556Z",
-      "visibility": false,
-      "data": {
-        "visibility": false
-      }
+      "date": "2024-09-11T13:25:04.126Z",
+      "visibility": false
     },
     {
-      "id": "af38",
-      "nickname": "에람쓰",
+      "id": "572b",
+      "userId": "yeyeye",
+      "nickname": "yeyeye",
       "result": "INFP",
       "answer": [
         "아니오",
-        "아니오",
-        "아니오",
-        "아니오"
+        null,
+        null,
+        null
       ],
-      "date": "2024-09-11T05:56:12.669Z",
-      "visibility": false,
-      "data": {
-        "visibility": false
-      }
+      "date": "2024-09-11T13:26:14.383Z",
+      "visibility": true
     },
     {
-      "id": "5e79",
-      "nickname": "에람쓰",
-      "result": "ESTJ",
+      "id": "538c",
+      "userId": "killhvhl1129",
+      "nickname": "이예람",
+      "result": "INFP",
       "answer": [
-        "예",
-        "예",
-        "예",
-        "예"
+        null,
+        null,
+        null,
+        null
       ],
-      "date": "2024-09-11T06:16:28.201Z",
+      "date": "2024-09-11T13:26:34.792Z",
       "visibility": true
     }
   ]

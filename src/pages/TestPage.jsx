@@ -12,7 +12,7 @@ const TestPage = ({ user }) => {
     const handleTestSubmit = async (answer) => {
         const result = calculateMBTI(answer);
         const resultData = {
-            userId: user.id,
+            userId: user.userId,
             nickname: user.nickname,
             result,
             answer,
