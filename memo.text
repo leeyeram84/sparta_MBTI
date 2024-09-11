@@ -15,3 +15,7 @@ input radio와 checkbox의 차이
 !!중복 체크 가능 여부!!
 radio는 하나의 값만 선택 가능
 checkbox는 개별 선택 값 설정이 가능
+
+마운트 될 때 = 화면에 보일 때
+
+<StrictMode> = 삭제 후 작업, 개발을 위한 모드일 뿐 딱히 지장 x

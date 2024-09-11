@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     const isLoggedIn = user?.success === true ? true : false; //memo.text 11 line~
     const nickname = user?.nickname ?? "";
 
-    console.log(user);
+    // console.log(user);
 
     // 헤더 로그아웃 버튼 클릭 시 alert 및 메인페이지 이동
     const handleLogout = () => {

@@ -1,3 +1,30 @@
 {
-    "testResults": []
+  "testResults": [
+    {
+      "id": "4053",
+      "nickname": "에람쓰",
+      "result": "ESTJ",
+      "answer": [
+        "예",
+        "예",
+        "예",
+        "예"
+      ],
+      "date": "2024-09-11T00:52:02.651Z",
+      "visibility": true
+    },
+    {
+      "id": "a7c0",
+      "nickname": "에람쓰",
+      "result": "ESTJ",
+      "answer": [
+        "예",
+        "예",
+        "예",
+        "예"
+      ],
+      "date": "2024-09-11T01:17:17.194Z",
+      "visibility": true
+    }
+  ]
 }

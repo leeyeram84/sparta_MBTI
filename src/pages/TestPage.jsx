@@ -2,9 +2,12 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import calculateMBTI from "../utils/mbtiCalculator";
 import TestForm from "../components/TestForm";
+import { createResults } from "../api/testResults";
 
-const Test = ({ user }) => {
+const TestPage = ({ user }) => {
     const navigate = useNavigate();
+
+    console.log(user);
 
     const handleTestSubmit = async (answer) => {
         const result = calculateMBTI(answer);
@@ -16,6 +19,8 @@ const Test = ({ user }) => {
             date: new Date().toISOString(),
             visibility: true,
         };
+        await createResults(resultData);
+        navigate("/result");
     };
     return (
         <div>
@@ -25,4 +30,4 @@ const Test = ({ user }) => {
     );
 };
 
-export default Test;
+export default TestPage;

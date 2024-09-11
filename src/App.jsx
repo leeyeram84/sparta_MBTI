@@ -18,10 +18,9 @@ import Layout from "./components/Layout";
 import { useContext } from "react";
 
 function App() {
+    const { user } = useContext(UserContext);
+    // 로그인 여부 확인
     const PublicRoute = () => {
-        // 로그인 여부 확인
-        const { user } = useContext(UserContext);
-
         if (user?.success) {
             alert("로그인 되어있습니다.");
             return <Navigate to="/" />;
@@ -29,30 +28,37 @@ function App() {
         return <Outlet />;
     };
 
-    const privateRoute = () => {
-        const { user } = useContext(UserContext);
-
+    // 강제 접근 막기
+    const PrivateRoute = () => {
         if (!user?.success) {
-            alert("로그인안했다아이가끄지라마;");
+            alert("로그인해주세요!!");
             return <Navigate to="/login" />;
         }
+        return <Outlet />;
     };
 
     return (
-        <UserContextProvider>
-            <BrowserRouter>
-                <Layout>
-                    <Routes>
-                        <Route element={<PublicRoute />}>
-                            <Route path="/login" element={<Login />}></Route>
-                            <Route path="/signup" element={<Signup />}></Route>
-                        </Route>
-                        <Route path="/" element={<Home />}></Route>
-                        <Route path="/test" element={<TestPage />}></Route>
-                    </Routes>
-                </Layout>
-            </BrowserRouter>
-        </UserContextProvider>
+        <BrowserRouter>
+            <Layout>
+                <Routes>
+                    <Route element={<PublicRoute />}>
+                        <Route path="/login" element={<Login />}></Route>
+                        <Route path="/signup" element={<Signup />}></Route>
+                    </Route>
+                    <Route element={<PrivateRoute />}>
+                        <Route
+                            path="/test"
+                            element={<TestPage user={user} />}
+                        ></Route>
+                        <Route
+                            path="/result"
+                            element={<TestResultPage />}
+                        ></Route>
+                    </Route>
+                    <Route path="/" element={<Home />}></Route>
+                </Routes>
+            </Layout>
+        </BrowserRouter>
     );
 }
 
