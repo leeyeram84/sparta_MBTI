@@ -1,3 +1,4 @@
+import { data } from "autoprefixer";
 import axios from "axios";
 
 const API_URL = "http://localhost:5000/testResults";
@@ -13,6 +14,12 @@ export const createResults = async (resultData) => {
     return response.data;
 };
 
-export const deleteTestResult = async (id) => {};
+export const deleteTestResult = async (id) => {
+    const response = await axios.delete(API_URL + `/${id}`, { data: { id } });
+    return response.data;
+};
 
-export const updateTestResultVisibility = async (id, visibility) => {};
+export const updateTestResultVisibility = async (id, visibility) => {
+    const response = await axios.patch(API_URL + `/${id}`, { visibility });
+    return response.data;
+};

@@ -1,7 +1,7 @@
 {
   "testResults": [
     {
-      "id": "4053",
+      "id": "bcea",
       "nickname": "에람쓰",
       "result": "ESTJ",
       "answer": [
@@ -10,21 +10,27 @@
         "예",
         "예"
       ],
-      "date": "2024-09-11T00:52:02.651Z",
-      "visibility": true
+      "date": "2024-09-11T05:50:32.556Z",
+      "visibility": false,
+      "data": {
+        "visibility": false
+      }
     },
     {
-      "id": "a7c0",
+      "id": "af38",
       "nickname": "에람쓰",
-      "result": "ESTJ",
+      "result": "INFP",
       "answer": [
-        "예",
-        "예",
-        "예",
-        "예"
+        "아니오",
+        "아니오",
+        "아니오",
+        "아니오"
       ],
-      "date": "2024-09-11T01:17:17.194Z",
-      "visibility": true
+      "date": "2024-09-11T05:56:12.669Z",
+      "visibility": false,
+      "data": {
+        "visibility": false
+      }
     }
   ]
 }

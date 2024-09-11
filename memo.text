@@ -19,3 +19,7 @@ checkbox는 개별 선택 값 설정이 가능
 마운트 될 때 = 화면에 보일 때
 
 <StrictMode> = 삭제 후 작업, 개발을 위한 모드일 뿐 딱히 지장 x
+
+axios.delete
+delete는 url 뒤에 id를 주소값으로 받아와야하고, id값을 data : {}로 감싸줘야한다.
+(API_URL + `/${id}`, { data: { id } });

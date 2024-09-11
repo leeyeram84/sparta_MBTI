@@ -52,7 +52,7 @@ function App() {
                         ></Route>
                         <Route
                             path="/result"
-                            element={<TestResultPage />}
+                            element={<TestResultPage user={user} />}
                         ></Route>
                     </Route>
                     <Route path="/" element={<Home />}></Route>
